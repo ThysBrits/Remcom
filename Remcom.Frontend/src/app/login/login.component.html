@@ -1,0 +1,15 @@
+<div class="login-container">
+  <h1>REMCOM Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div>
+      <label for="username">Username</label>
+      <input id="username" formControlName="username" required />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" required />
+    </div>
+    <button type="submit" [disabled]="loading">Login</button>
+    <div *ngIf="error" class="error">{{ error }}</div>
+  </form>
+</div>
