@@ -1,0 +1,6 @@
+@Remcom.Api_HostAddress = http://localhost:5254
+
+GET {{Remcom.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
