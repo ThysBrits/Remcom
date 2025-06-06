@@ -31,7 +31,7 @@ export class LoginComponent {
     this.error = '';
     this.loading = true;
     const { username, password } = this.loginForm.value;
-    this.http.post<any>('http://localhost:5000/api/users/login', { username, password })
+    this.http.post<any>('http://localhost:5254/api/users/login', { username, password })
       .subscribe({
         next: (res) => {
           localStorage.setItem('token', res.token);

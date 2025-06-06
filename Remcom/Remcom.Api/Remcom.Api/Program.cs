@@ -32,6 +32,17 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+// Add CORS policy to allow all origins
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -40,6 +51,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Use CORS policy
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();

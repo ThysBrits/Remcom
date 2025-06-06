@@ -1,3 +1,50 @@
+# REMCOM Solution
+
+This repository contains the REMCOM MVP solution, consisting of:
+
+- **Remcom.Api**: .NET Core Web API backend (PostgreSQL-ready)
+- **Remcom.Frontend**: Angular frontend (scaffolded with Vite)
+
+## Getting Started
+
+### Prerequisites
+- .NET 8 SDK
+- Node.js (v18+ recommended)
+- PostgreSQL (for backend database)
+
+### Backend Setup
+1. Navigate to the API project:
+   ```powershell
+   cd Remcom/Remcom.Api/Remcom.Api
+   ```
+2. Update `appsettings.json` with your PostgreSQL connection string.
+3. Build and run the API:
+   ```powershell
+   dotnet build
+   dotnet run
+   ```
+
+### Frontend Setup
+1. Navigate to the frontend project:
+   ```powershell
+   cd Remcom.Frontend
+   npm install
+   npm run dev
+   ```
+
+### Solution File
+- Open `Remcom/Remcom.sln` in Visual Studio or VS Code for full solution view.
+
+## Project Structure
+- `Remcom/Remcom.Api/Remcom.Api`: .NET Core Web API
+- `Remcom.Frontend`: Angular (Vite) frontend
+
+## Notes
+- See the root `README.md` for full MVP specification and requirements.
+- PostgreSQL integration and API endpoints to be implemented as per requirements.
+
+---
+
 # REMCOM MVP Specification
 
 ## Objective
